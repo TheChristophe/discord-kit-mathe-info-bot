@@ -8,8 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Christophe",
   "devDependencies": {
     "@types/node": "^16.9.6",
     "nodemon": "^2.0.13",
