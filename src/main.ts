@@ -3,6 +3,7 @@ import { token } from './config.json';
 import { setupSlashCommands } from './slashHelper';
 import { commands } from './commands';
 import { CommandCallback } from './commandDescriptor';
+import { components } from './components';
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
@@ -18,6 +19,10 @@ client.on('interactionCreate', async interaction => {
     } else {
         await interaction.reply({ content: 'Unknown command!', ephemeral: true });
     }
+});
+
+components.map((eventListener) => {
+    eventListener.setup(client);
 });
 
 client.once('ready', async () => {
