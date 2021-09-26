@@ -1,4 +1,4 @@
-import { metadata as echoData } from './echo';
-import { CommandMetadata } from '../commandMetadata';
+import { descriptor as echoDescriptor } from './echo';
+import { CommandDescriptor } from '../commandDescriptor';
 
-export const commands: CommandMetadata[] = [echoData];
+export const commands: CommandDescriptor[] = [echoDescriptor];

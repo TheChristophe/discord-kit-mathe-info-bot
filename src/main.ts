@@ -2,7 +2,7 @@ import { Client, Intents } from 'discord.js';
 import { token } from './config.json';
 import { setupSlashCommands } from './slashHelper';
 import { commands } from './commands';
-import { CommandCallback } from './commandMetadata';
+import { CommandCallback } from './commandDescriptor';
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 

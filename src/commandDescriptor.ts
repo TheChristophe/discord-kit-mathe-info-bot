@@ -3,7 +3,7 @@ import { CommandInteraction } from 'discord.js';
 
 export type CommandCallback = (interaction: CommandInteraction) => Promise<void>;
 
-export type CommandMetadata = {
+export type CommandDescriptor = {
     builder: SlashCommandBuilder,
     callback: CommandCallback
 }

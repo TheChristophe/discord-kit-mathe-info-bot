@@ -1,9 +1,9 @@
 import { CommandInteraction } from 'discord.js';
-import { CommandMetadata } from '../commandMetadata';
+import { CommandDescriptor } from '../commandDescriptor';
 
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
-export const metadata: CommandMetadata = {
+export const descriptor: CommandDescriptor = {
     builder: new SlashCommandBuilder()
         .setName('echo')
         .setDescription('Replies with your input!')
