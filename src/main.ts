@@ -15,6 +15,8 @@ client.on('interactionCreate', async interaction => {
 
     if (commandMap.has(interaction.commandName)) {
         await (commandMap.get(interaction.commandName) as CommandCallback)(interaction);
+    } else {
+        await interaction.reply({ content: 'Unknown command!', ephemeral: true });
     }
 });
 
