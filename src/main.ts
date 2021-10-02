@@ -2,14 +2,19 @@ import { Client, Constants, Intents } from 'discord.js';
 import { token } from './config.json';
 import { setupSlashCommands } from './slashHelper';
 import { commands } from './commands';
-import { CommandCallback } from './commandDescriptor';
+import { CommandCallback } from './commandDescriptorBase';
 import { components } from './components';
+import { database } from './database';
 
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES, Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Client({
+    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES, Intents.FLAGS.GUILD_MESSAGES],
+});
 
-const commandMap = new Map<string, CommandCallback>(commands.map((command) => [command.builder.name, command.callback]));
+const commandMap = new Map<string, CommandCallback>(
+    commands.map((command) => [command.builder.name, command.callback])
+);
 
-client.on(Constants.Events.INTERACTION_CREATE, async interaction => {
+client.on(Constants.Events.INTERACTION_CREATE, async (interaction) => {
     if (!interaction.isCommand()) {
         return;
     }
@@ -28,6 +33,7 @@ components.map((eventListener) => {
 
 client.once(Constants.Events.CLIENT_READY, async () => {
     console.log('Ready!');
+    await database.sync();
     await setupSlashCommands();
 });
 

@@ -1,31 +1,52 @@
 import { REST } from '@discordjs/rest';
 import { Routes } from 'discord-api-types/v9';
-import { token } from './config.json';
+import { token, clientId, guildIds } from './config.json';
 
 import { commands } from './commands';
-import { SlashCommandBuilder } from '@discordjs/builders';
-
-const commandsBuilders: SlashCommandBuilder[] = commands.map((command) => command.builder);
-
-// Place your client and guild ids here
-const clientId = '890905720164327454';
-//const guildId = '501365485837877268';
-const guildId = '348251688135557121';
+import { ApplicationCommand } from 'discord.js';
 
 const rest = new REST({ version: '9' }).setToken(token);
 
 export async function setupSlashCommands() {
     try {
-        console.log('Started refreshing application (/) commands.');
-
-        commandsBuilders.map((c) => console.log('Added', c.name));
-
-        await rest.put(
-            Routes.applicationGuildCommands(clientId, guildId),
-            { body: commandsBuilders }
+        console.log(
+            'Registering commands',
+            commands.map((command) => command.builder.name).join(', ')
         );
 
-        console.log('Successfully reloaded application (/) commands.');
+        type GuildCommands = { guildId: string; commands: ApplicationCommand[] };
+
+        const guildCommands = (await Promise.all(
+            guildIds.map(
+                (guild) =>
+                    new Promise<GuildCommands>((resolve, reject) => {
+                        (
+                            rest.put(Routes.applicationGuildCommands(clientId, guild), {
+                                body: commands.map((command) => command.builder),
+                            }) as Promise<ApplicationCommand[]>
+                        ).then(
+                            (value: ApplicationCommand[]) =>
+                                resolve({
+                                    guildId: guild,
+                                    commands: value,
+                                }),
+                            () => reject()
+                        );
+                    })
+            )
+        )) as GuildCommands[];
+
+        // TODO: is there nicer way to assign commands their ids?
+        //       this is kind of awful, thanks discord
+        guildCommands.map((guild) => {
+            commands.map((command) => {
+                guild.commands.map((guildCommand) => {
+                    if (command.builder.name === guildCommand.name) {
+                        command.idMappings.set(guild.guildId, guildCommand.id);
+                    }
+                });
+            });
+        });
     } catch (error) {
         console.error(error);
     }
