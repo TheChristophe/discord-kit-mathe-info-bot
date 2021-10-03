@@ -7,6 +7,11 @@ export namespace PrebuiltPermissions {
         type: Constants.ApplicationCommandPermissionTypes.ROLE,
         permission: true,
     };
+    export const botOwner: ApplicationCommandPermissionData = {
+        id: '147399559247691776',
+        type: Constants.ApplicationCommandPermissionTypes.USER,
+        permission: true,
+    };
 }
 
 export function matchPermissions(

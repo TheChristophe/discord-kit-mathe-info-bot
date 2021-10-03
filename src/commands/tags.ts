@@ -1,15 +1,11 @@
 import { CommandDescriptorBase } from '../commandDescriptorBase';
-import {
-    ApplicationCommandPermissionData,
-    CommandInteraction,
-    Constants,
-    GuildMember,
-} from 'discord.js';
+import { ApplicationCommandPermissionData, CommandInteraction, GuildMember } from 'discord.js';
 
 import { database } from '../database';
 import Sequelize from 'sequelize';
 import { SlashCommandBuilder } from '@discordjs/builders';
 import { matchPermissions, PrebuiltPermissions } from '../permissions';
+import responses from '../genericResponses';
 
 const Tags = database.define('tags', {
     name: {
@@ -54,12 +50,7 @@ enum TagsCommands {
 
 const tagsPermissions: ApplicationCommandPermissionData[] = [
     PrebuiltPermissions.modsOnly,
-    {
-        // me
-        id: '147399559247691776',
-        type: Constants.ApplicationCommandPermissionTypes.USER,
-        permission: true,
-    },
+    PrebuiltPermissions.botOwner,
 ];
 
 export const tags: CommandDescriptorBase = {
@@ -134,7 +125,7 @@ export const tags: CommandDescriptorBase = {
             if (!rowCount) {
                 await interaction.reply({ content: 'That tag did not exist.', ephemeral: true });
             }
-            await interaction.reply({ content: 'Okay!', ephemeral: true });
+            await interaction.reply({ content: responses.SUCCESS, ephemeral: true });
         }
     },
     permissions: tagsPermissions,

@@ -1,14 +1,11 @@
-import { Client, Constants, Intents } from 'discord.js';
+import { Constants } from 'discord.js';
 import { token } from './config.json';
 import { setupSlashCommands } from './slashHelper';
 import { commands } from './commands';
 import { CommandCallback } from './commandDescriptorBase';
 import { components } from './components';
 import { database } from './database';
-
-const client = new Client({
-    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.DIRECT_MESSAGES, Intents.FLAGS.GUILD_MESSAGES],
-});
+import { client } from './client';
 
 const commandMap = new Map<string, CommandCallback>(
     commands.map((command) => [command.builder.name, command.callback])
