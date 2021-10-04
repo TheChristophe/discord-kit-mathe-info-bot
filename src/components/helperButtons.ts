@@ -4,18 +4,18 @@ import responses from '../genericResponses';
 import { DATA_COLLECITON_ID, LINKS_ID, RULES_ID, STRUCTURE_ID } from '../commands/helperButtons';
 
 const rulesText = `__Regeln__
-In Kurzfassung: Bitte nett sein! :3
+In Kurzfassung: **Bitte nett sein! :3**
 
 Bitte verhalte dich respektvoll gegenüber deinen Kommilitonen und verzichte auf rassistische, diskriminierende, unerwünschte oder beleidigende Worte, egal wem gegenüber. Wir sind ein offener und inklusiver Raum; offensive und böswillige Geschöpfe sind kein Teil davon. Auch spammen und ungefragte & ungekennzeichnete Werbung sind für ein Miteinander zu vermeiden.
 
-Zum Schutze Minderjähriger (unter 18 Jahren) und derjenigen, die diese Inhalte nicht sehen möchte, sind NSFW-Inhalte (Not Safe for Work, bspw. Nacktheit) in einen als solchen markierten Kanal unter den Kategorien Spam zu versenden—also insbesondere nicht in chat. Illegale Inhalte und oben genannten Regelungen sind auch dort nicht ausgenommen. Hinweis: KIT Mathe Info befolgt die Allgemeinen Geschäftsbedingungen von Discord und deutsches Recht, insbesondere bezüglich Inhalten für Erwachsene.
+Zum Schutze Minderjähriger (unter 18 Jahren) und derjenigen, die diese Inhalte nicht sehen möchte, sind NSFW-Inhalte (*Not Safe for Work*, bspw. Nacktheit) in einen als solchen markierten Kanal unter den Kategorien Spam zu versenden—also insbesondere nicht in <#501365485837877270>. Illegale Inhalte und oben genannten Regelungen sind auch dort nicht ausgenommen. Hinweis: KIT Mathe Info befolgt die Allgemeinen Geschäftsbedingungen von Discord und deutsches Recht, insbesondere bezüglich Inhalten für Erwachsene.
 
 Im Weiteren bist du gebeten den Server nicht mehrfach wiederholt zu verlassen und beizutreten.
 
 __Moderation__
 Wenn die Moderation und Administration dich auf etwas hinweist, so ist dem auch nachzugehen.
 
-Bei Schwierigkeiten, Vorschlägen oder sonstigen Kummer bitte einfach die @Moderation pingen oder in moderation melden.`;
+Bei Schwierigkeiten, Vorschlägen oder sonstigen Kummer bitte einfach die <@&510218732698599445> pingen oder in <#501374594414936075> melden.`;
 
 const structureText = `__Aufbau__
 In Discord gibt es Text- und Sprachkanäle. In den Textkanälen kann ausschließlich geschrieben, in Sprachkanälen ausschließlich gesprochen werden. Man kann gleichzeitig in einem Text- und einem Sprachkanal sein.
@@ -23,22 +23,22 @@ In Discord gibt es Text- und Sprachkanäle. In den Textkanälen kann ausschließ
 In den Textkanälen können Text, GIFs, Emoji, Bilder oder andere Dateien ausgetauscht werden. Nachrichten unterstützen einfaches Markdown (https://support.discord.com/hc/de/articles/210298617). Übrigens kannst du deine Nachrichten auch editieren, indem du über sie hoverst und dann die rechts erscheinenden Punkte anklickst.
 
 __Kanäle & Kategorien__
-Ordnung ist nicht nur generell und im Studium wichtig, sondern auch hier zu finden. Wenn du eine Kategorie oder einen Kanal nicht sehen möchtest, bspw. für einen reinen Fachaustausch, kannst du diese einklappen bzw. stummschalten.
+Ordnung ist nicht nur generell und im Studium wichtig, sondern auch hier zu finden.  Wenn du eine Kategorie oder einen Kanal nicht sehen möchtest, bspw. für einen reinen Fachaustausch, kannst du diese einklappen bzw. stummschalten.
 
 __Allgemein__
-Unter Allgemein findest du allerhand ums Studieren und Studentenleben an sich. In chat erreichst du wohl die meisten, über ein fröhliches Hallöchen freuen wir uns! Auf direkter Suche nach Kommilitonen oder Erstsemester-Fragen? Schau doch in ersti & lerngruppensuche vorbei. bot eignet sich, um verantwortungsvoll mit den Bots zu spielen. Geheimtipp: !mensa. Frust herauslassen geschieht idealerweise in rant.
+Unter Allgemein findest du allerhand ums Studieren und Studentenleben an sich. In <#501365485837877270> erreichst du wohl die meisten, über ein fröhliches Hallöchen freuen wir uns! Auf direkter Suche nach Kommilitonen oder Erstsemester-Fragen? Schau doch in <#756549060906975252> & <#501786647017291776> vorbei. <#636702198960750613> eignet sich, um *verantwortungsvoll* mit den Bots zu spielen. Geheimtipp: \`!mensa\`. Frust herauslassen geschieht idealerweise in <#581872332902236160>.
 
 __Fachschaft__
-Du möchtest die Fachschaft etwas näher kennenlernen? Oder du hast eine Frage zu deinem Studium, aber eine E-Mail ist dir gerade zu viel? Dann steht dir der Kanal an-die-fachschaft zur Verfügung mit direkter Anbindung an Fachschaftsinfrastruktur.`;
+Du möchtest die Fachschaft etwas näher kennenlernen? Oder du hast eine Frage zu deinem Studium, aber eine E-Mail ist dir gerade zu viel? Dann steht dir der Kanal <#781621377861419058> zur Verfügung mit direkter Anbindung an Fachschaftsinfrastruktur.`;
 
 const structureText2 = `__Module__
-Nachfolgend der Austausch über verschiedenste Module in Programmieren, Sonstiges Info, Mathe, Stammmodule und Ergänzungsfach. Wenn dir eine mögliche Abkürzung o. ä. fehlt, frage am besten in chat nach. Wünschst du dir die Unterstützung höherer Semester bei Blättern, so denke bitte daran, die Aufgabenstellung in Form des Übungsblattes oder eines Bildschirmausschnittes der jeweiligen Fragen anzuhängen. Nicht jeder möchte allen ILIAS-Kursen beitreten. Danke für dein Verständnis. Teilweise schwebt auch der ein oder andere Tutor rum, der dir ein paar allgemeinere Tipps geben kann.
+Nachfolgend der Austausch über verschiedenste Module in Programmieren, Sonstiges Info, Mathe, Stammmodule und Ergänzungsfach. Wenn dir eine mögliche Abkürzung o. ä. fehlt, frage am besten in <#501365485837877270> nach. Wünschst du dir die Unterstützung höherer Semester bei Blättern, so denke bitte daran, die Aufgabenstellung in Form des Übungsblattes oder eines Bildschirmausschnittes der jeweiligen Fragen anzuhängen. Nicht jeder möchte allen ILIAS-Kursen beitreten. Danke für dein Verständnis. Teilweise schwebt auch der ein oder andere Tutor rum, der dir ein paar allgemeinere Tipps geben kann.
 
 __Spam (Offiziell)__
-Spam (Offiziell) vereint ein paar Kanäle, die sich über die Zeit etabliert haben, einerseits um ein paar Gruppen einen dedizierten Platz zu geben andererseits um chat zu entlasten. Besonders hervorhebenswert sind dabei der gamer-channel, katzen, politik und natürlich es-ist-leider-ein-fehler-aufgetreten für unser heiß geliebtes ILIAS.
+Spam (Offiziell) vereint ein paar Kanäle, die sich über die Zeit etabliert haben, einerseits um ein paar Gruppen einen dedizierten Platz zu geben andererseits um <#501365485837877270> zu entlasten. Besonders hervorhebenswert sind dabei der <#709473773752942692>, <#722607190753542236>, <#726978155482447964> und natürlich <#713336530311315468> für unser heiß geliebtes ILIAS.
 
 __Spam (Temporär)__
-Spannend zu verfolgen ist Spam (Temporär), in dem alle die Berechtigung haben einen eigenen Kanal für ein bestimmtes Thema o. ä. zu erstellen, sowie zu etablieren. Achtung, auch löschen darf diese jeder! Die Verwaltung übernimmt @Joshua; probiere es einfach aus mit den Befehlen unter $help. Veränderungen finden sich dabei in channel-announcer unter Spam (Offiziell).
+Spannend zu verfolgen ist Spam (Temporär), in dem alle die Berechtigung haben einen eigenen Kanal für ein bestimmtes Thema o. ä. zu erstellen, sowie zu etablieren. Achtung, auch löschen darf diese jeder! Die Verwaltung übernimmt <@529846151239696396>; probiere es einfach aus mit den Befehlen unter \`$help\`. Veränderungen finden sich dabei in <#667069274208337944> unter Spam (Offiziell).
 
 __Sprachkanäle__
 Ganz zum Schluss unsere einsamen Sprachkanäle. Informatiker sind etwas schüchtern, vielleicht schaffst du es sie zu motivieren und den Kanälen frischen Wind zu bringen. :sweat_smile:`;
@@ -65,6 +65,7 @@ __Fachschaft__
 * Einführungswoche (O-Phase): https://o-phase.com/de/
 * Ersti-Info: https://o-phase.com/de/ws2021/ersti_info.pdf
 * Klausurenverkauf: https://www.fsmi.uni-karlsruhe.de/odie/web/
+* Ersti-Info https://o-phase.com/de/ws2122/erstiinfo.pdf
 __Beratung__
 * MINT-Kolleg: http://www.mint-kolleg.kit.edu/Studienbegleitung.php
 * Zentrum für Informationen und Beratung (ZIB): http://www.sle.kit.edu/imstudium/zib.php
@@ -72,30 +73,29 @@ __Verschiedenes__
 * KIT Mathe Info Discord: https://discord.gg/D3RCCMj
 * ILIAS-Downloader: https://github.com/Garmelon/PFERD
 * Subreddit: https://www.reddit.com/r/KaIT/
-* Mensaplan: https://www.sw-ka.de/en/essen/
-* Interfakultativer Erstiserver: https://discord.gg/ZADFRNu`;
+* Mensaplan: https://www.sw-ka.de/en/essen/`;
 
-const gdprText = `• join-boost-log 
+const gdprText = `• <#631221795927883797> 
   • Was: server-beitritte und server-boosts
   • Wieso: standard-discord feature, zum bedanken bei server boostern
-• join-leave-log 
+• <#790386955841437696>
   • Was: server-beitritte und server-verlassen
   • Wieso: alarmieren über mögliche trolle, spammer, [...]
-• member-log 
+• <#758775536801284186>
   • Was: namens-änderungen, profilbild-änderungen
   • Wieso: alarmieren über offensive oder schockierende namen & bilder
-• message-log 
+• <#744526269101899846>
   • Was: gelöschte nachrichten
   • Wieso: kontextnachvollziehung für konfliktfälle, bspw. fälle wo beleidigungen o.ä. nachträglich gelöscht werden sollten
-• server-log 
+• <#787344100759306270>
   • Was: änderungen an server-channel, inkl. beschreibung, namen, permissions, hauptsächlich durch die moderation
   • Wieso: benachrichtigung für andere moderatoren über durchgeführte änderungen
-• voice-log 
+• <#790387010556657665>
   • Was: beitreten und verlassen der voice-channels
   • Wieso: kontextnachvollziehung für konfliktfälle, bspw. nutzern die kurz beitreten um zu stören 
-• dyno-backup-log 
+• <#829416522434478150>
   • Was: untermenge der oben genannten daten
-  • Wieso: redundanz, falls @Carl zeitweise nicht verfügbar ist
+  • Wieso: redundanz, falls <@!235148962103951360> zeitweise nicht verfügbar ist
 
 Für weitere Informationen, siehe https://discord.com/channels/501365485837877268/501374594414936075/872545269890306058`;
 

@@ -16,7 +16,7 @@ const permissions: ApplicationCommandPermissionData[] = [
     PrebuiltPermissions.botOwner,
 ];
 
-const introText: string = `Herzliches Willkommen auf dem (inoffiziellen) KIT Mathe Info Server!
+const introText: string = `Herzliches Willkommen auf dem KIT Mathe Info Server!
 
 Ich bitte dich, die Informationen hier kurz durchzulesen, bevor du zu den anderen Kanälen gehst, damit alle in Einklang mit dem erwarteten Verhalten sind.
 
