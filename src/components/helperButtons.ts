@@ -75,7 +75,29 @@ __Verschiedenes__
 * Mensaplan: https://www.sw-ka.de/en/essen/
 * Interfakultativer Erstiserver: https://discord.gg/ZADFRNu`;
 
-const gdprText = `TODO!`;
+const gdprText = `• join-boost-log 
+  • Was: server-beitritte und server-boosts
+  • Wieso: standard-discord feature, zum bedanken bei server boostern
+• join-leave-log 
+  • Was: server-beitritte und server-verlassen
+  • Wieso: alarmieren über mögliche trolle, spammer, [...]
+• member-log 
+  • Was: namens-änderungen, profilbild-änderungen
+  • Wieso: alarmieren über offensive oder schockierende namen & bilder
+• message-log 
+  • Was: gelöschte nachrichten
+  • Wieso: kontextnachvollziehung für konfliktfälle, bspw. fälle wo beleidigungen o.ä. nachträglich gelöscht werden sollten
+• server-log 
+  • Was: änderungen an server-channel, inkl. beschreibung, namen, permissions, hauptsächlich durch die moderation
+  • Wieso: benachrichtigung für andere moderatoren über durchgeführte änderungen
+• voice-log 
+  • Was: beitreten und verlassen der voice-channels
+  • Wieso: kontextnachvollziehung für konfliktfälle, bspw. nutzern die kurz beitreten um zu stören 
+• dyno-backup-log 
+  • Was: untermenge der oben genannten daten
+  • Wieso: redundanz, falls @Carl zeitweise nicht verfügbar ist
+
+Für weitere Informationen, siehe https://discord.com/channels/501365485837877268/501374594414936075/872545269890306058`;
 
 export const helperButtons: ComponentDescriptor = {
     setup: (client: Client) => {

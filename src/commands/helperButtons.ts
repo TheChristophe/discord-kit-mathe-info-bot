@@ -20,7 +20,7 @@ const introText: string = `Herzliches Willkommen auf dem (inoffiziellen) KIT Mat
 
 Ich bitte dich, die Informationen hier kurz durchzulesen, bevor du zu den anderen Kanälen gehst, damit alle in Einklang mit dem erwarteten Verhalten sind.
 
-Wie der Name bereits vermuten lässt versammeln sich hier die Mathe- und Informatikstudenten des Karlsruher Institut für Technologie, um sich über das Studium, aber natürlich auch jede Menge anderes zu unterhalten`;
+Wie der Name bereits vermuten lässt, versammeln sich hier die Mathe- und Informatikstudenten des Karlsruher Institut für Technologie, um sich über das Studium, aber natürlich auch jede Menge anderes zu unterhalten.`;
 
 export const RULES_ID = 'a39b4efa-f455-475f-bdd0-d757e022aaa4';
 export const STRUCTURE_ID = 'a5c08618-672b-4915-9ed5-054b1f52f058';
@@ -69,22 +69,32 @@ export const helpButtons = {
 
         const row = new MessageActionRow()
             .addComponents(
-                new MessageButton().setCustomId(RULES_ID).setLabel('Regeln').setStyle('SECONDARY')
+                new MessageButton()
+                    .setCustomId(RULES_ID)
+                    .setLabel('Regeln')
+                    .setStyle('SECONDARY')
+                    .setEmoji('👮')
             )
             .addComponents(
                 new MessageButton()
                     .setCustomId(STRUCTURE_ID)
                     .setLabel('Serverstruktur')
                     .setStyle('SECONDARY')
+                    .setEmoji('🏘️')
             )
             .addComponents(
-                new MessageButton().setCustomId(LINKS_ID).setLabel('Links').setStyle('SECONDARY')
+                new MessageButton()
+                    .setCustomId(LINKS_ID)
+                    .setLabel('Links')
+                    .setStyle('SECONDARY')
+                    .setEmoji('🌐')
             )
             .addComponents(
                 new MessageButton()
                     .setCustomId(DATA_COLLECITON_ID)
-                    .setLabel('Daten')
+                    .setLabel('Logging')
                     .setStyle('SECONDARY')
+                    .setEmoji('📒')
             );
         await channel.send({
             content: introText,
