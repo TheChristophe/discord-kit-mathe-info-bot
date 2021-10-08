@@ -87,29 +87,9 @@ export const oPhasenRoles: MessageSelectOptionData[] = [
 
 export const jahrgangRoles: MessageSelectOptionData[] = [
     {
-        label: 'Langzeitstudent',
-        emoji: '\ud83e\udd87',
-        value: '756553637903204492',
-    },
-    {
-        label: 'WS 2016/2017',
-        emoji: '\ud83e\udd84',
-        value: '756553572178460782',
-    },
-    {
-        label: 'WS 2017/2018',
-        emoji: '\ud83e\udd8b',
-        value: '756553525198192840',
-    },
-    {
-        label: 'WS 2018/2019',
-        emoji: '\ud83d\udc26',
-        value: '756553491237044224',
-    },
-    {
-        label: 'WS 2019/2020',
-        emoji: '\ud83d\udc27',
-        value: '756553443862380675',
+        label: 'WS 2021/2022',
+        emoji: '\ud83d\udc1d',
+        value: '843482558544347136',
     },
     {
         label: 'WS 2020/2021',
@@ -117,9 +97,29 @@ export const jahrgangRoles: MessageSelectOptionData[] = [
         value: '756553386786291944',
     },
     {
-        label: 'WS 2021/2022',
-        emoji: '\ud83d\udc1d',
-        value: '843482558544347136',
+        label: 'WS 2019/2020',
+        emoji: '\ud83d\udc27',
+        value: '756553443862380675',
+    },
+    {
+        label: 'WS 2018/2019',
+        emoji: '\ud83d\udc26',
+        value: '756553491237044224',
+    },
+    {
+        label: 'WS 2017/2018',
+        emoji: '\ud83e\udd8b',
+        value: '756553525198192840',
+    },
+    {
+        label: 'WS 2016/2017',
+        emoji: '\ud83e\udd84',
+        value: '756553572178460782',
+    },
+    {
+        label: 'Langzeitstudent',
+        emoji: '\ud83e\udd87',
+        value: '756553637903204492',
     },
 ];
 
