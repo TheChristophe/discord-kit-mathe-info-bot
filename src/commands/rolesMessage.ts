@@ -45,6 +45,9 @@ export function makeRolePicker(
                     .setName('destination')
                     .setDescription('The channel to send it to')
                     .setRequired(true)
+            )
+            .addStringOption((option) =>
+                option.setName('message').setDescription('The message to update').setRequired(false)
             ),
         callback: async (interaction: CommandInteraction) => {
             if (interaction.member === null) {
@@ -86,10 +89,27 @@ export function makeRolePicker(
                     .addOptions(roles)
             );
 
-            await channel.send({
-                content: helpText,
-                components: [row],
-            });
+            const messageId = interaction.options.getString('message');
+            if (messageId !== null) {
+                const message = await channel.messages.fetch(messageId);
+                if (message !== undefined) {
+                    await message.edit({
+                        content: helpText,
+                        components: [row],
+                    });
+                } else {
+                    await interaction.reply({
+                        content: responses.MESSAGE_NOT_FOUND,
+                        ephemeral: true,
+                    });
+                    return;
+                }
+            } else {
+                await channel.send({
+                    content: helpText,
+                    components: [row],
+                });
+            }
             await interaction.reply({ content: responses.SUCCESS, ephemeral: true });
         },
         permissions: permissions,
