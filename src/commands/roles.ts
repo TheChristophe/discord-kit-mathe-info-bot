@@ -50,7 +50,6 @@ export const oPhasenRoles: MessageSelectOptionData[] = [
         label: 'Parti πple',
         emoji: '\ud83c\udf8a',
         value: '633304892987015178',
-        description: DEFUNCT,
     },
     {
         label: 'Pirates',
