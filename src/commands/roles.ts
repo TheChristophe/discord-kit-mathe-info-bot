@@ -158,6 +158,11 @@ export const sonstigeRoles: MessageSelectOptionData[] = [
         emoji: '🦋',
     },
     {
+        label: 'Lehramt',
+        value: '897301968429678622',
+        emoji: '🧑‍🏫',
+    },
+    {
         label: 'Ehemaliger Student',
         value: '892763573477048320',
         emoji: '🧙',
