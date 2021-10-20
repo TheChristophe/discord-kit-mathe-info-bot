@@ -168,10 +168,9 @@ export const sonstigeRoles: MessageSelectOptionData[] = [
         emoji: '🧙',
     },
     {
-        label: 'skribbl.io',
-        value: '817115374998126663',
-        emoji: '🎨',
-        description: 'Für (spontan-organisierte) skribbl.io Spieleabende',
+        label: 'Age of Empires 2',
+        value: '900485186872020992',
+        emoji: '⚔️',
     },
     {
         label: 'Lernzentrum',
